@@ -1,19 +1,17 @@
-import Image from "next/image";
+
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main>
-        <section>
-
-          <h1 className="text-9xl font-bold text-black text-center">
-            HARI
-          </h1>
-
-
-        </section>
-      </main>
-
-    </div>
-  );
+    return (
+        <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-sans">
+            <main className="text-center">
+                <h1 className="text-[12rem] font-bold text-black leading-none">
+                    HARI
+                </h1>
+                <h2 className="text-xl md:text-3xl font-bold text-black mt-4">
+                    SOFTWARE / GAME DEVELOPER
+                </h2>
+            </main>
+        </div>
+    );
 }
+
