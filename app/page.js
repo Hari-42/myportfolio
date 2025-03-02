@@ -25,9 +25,8 @@ export default function Home() {
                                 </a>
                             </div>
                             <div className="mb-6 md:mb-0">
-                                <h2 className="mb-6 text-2xl font-bold text-black">Legal matters</h2>
                                 <ul className="text-gray-800 font-medium">
-                                    <li>
+                                    <li className="mb-4">
                                     </li>
                                 </ul>
                             </div>
@@ -53,6 +52,11 @@ export default function Home() {
                                         <a href='https://github.com/Hari-42'
                                            className="hover:text-blue-500 transition-colors duration-300">Github -
                                             Hari-42</a>
+                                    </li>
+                                    <li className="mb-4">
+                                        <a href='https://github.com/Hari-42'
+                                           className="hover:text-blue-500 transition-colors duration-300">Games -
+                                            MKH-GAMES</a>
                                     </li>
                                 </ul>
                             </div>
