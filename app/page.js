@@ -54,7 +54,7 @@ export default function Home() {
                                             Hari-42</a>
                                     </li>
                                     <li className="mb-4">
-                                        <a href='https://github.com/Hari-42'
+                                        <a href='https://mkh-games.vercel.app/'
                                            className="hover:text-blue-500 transition-colors duration-300">Games -
                                             MKH-GAMES</a>
                                     </li>
