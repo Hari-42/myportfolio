@@ -1,6 +1,4 @@
-import { FC } from 'react';
-
-const Home: FC = () => {
+export default function Home() {
     return (
         <div
             className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-sans">
@@ -19,7 +17,7 @@ const Home: FC = () => {
 
             <footer>
                 <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-                    <hr className="my-6 sm:mx-auto border-gray-700 lg:my-8" />
+                    <hr className="my-6 sm:mx-auto border-gray-700 lg:my-8"/>
                     <div className="md:flex md:justify-between">
                         <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-4 w-full">
                             <div className="mb-6 md:mb-0">
@@ -66,7 +64,7 @@ const Home: FC = () => {
                             </div>
                         </div>
                     </div>
-                    <hr className="my-6 sm:mx-auto border-gray-700 lg:my-8" />
+                    <hr className="my-6 sm:mx-auto border-gray-700 lg:my-8"/>
                     <div className="flex items-center justify-center flex-wrap">
                         <span
                             className="text-sm text-black-500 text-center">© 2025 MKH-GAMES All Rights Reserved.</span>
@@ -75,6 +73,4 @@ const Home: FC = () => {
             </footer>
         </div>
     );
-};
-
-export default Home;
+}
