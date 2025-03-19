@@ -2,7 +2,7 @@ import './globals.css';
 
 
 export const metadata = {
-    title: "HARI | Software & Game Developer",
+    title: "HARI-Portfolio",
     description: "Portfolio site of Hari, Software/Game Developer",
 };
 
