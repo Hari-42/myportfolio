@@ -11,18 +11,27 @@ export default function RootLayout({ children }) {
         <html lang="en">
         <body className="bg-white text-black">
         {/* Header */}
-        <header className="py-3 border-b border-black bg-[#5E8FB8] w-full">
-            <div className="flex items-center justify-between">
-                <a className="inline-flex items-center justify-center text-xl font-bold h-10 px-4 py-2 text-black">
-                    HARI
-                </a>
-                <div className="px-4 lg:px-8 mx-auto w-full max-w-4xl">
-                    <div className="relative flex h-16 items-center justify-between w-full">
-                        <nav className="flex items-center space-x-4 ml-auto">
-                            <a className="inline-flex items-center justify-center text-sm font-medium h-10 px-4 py-2 text-black hover:font-semibold">Home</a>
-                            <a className="inline-flex items-center justify-center text-sm font-medium h-10 px-4 py-2 text-black hover:font-semibold">About Me</a>
-                            <a className="inline-flex items-center justify-center text-sm font-medium h-10 px-4 py-2 text-black hover:font-semibold">Projects</a>
+        <header className="bg-[#5E8FB8] text-black sm:flex sm:justify-between py-3">
+            <div className="px-4 lg:px-8 mx-auto w-full max-w-4xl">
+                <div className="border-b relative flex h-16 items-center justify-between w-full">
+
+                    <div className="flex items-center">
+                        <a href="page.js" className="flex items-center space-x-6">
+                            HARI
+                        </a>
+                    </div>
+
+                    <div className="flex items-center">
+                        <nav className="flex items-center hidden md:block">
+                            <a href=""
+                               className="inline-flex items-center justify-center text-sm font-bold h-10 px-4 py-2">Home</a>
+                            <a href=""
+                               className="inline-flex items-center justify-center text-sm font-medium h-10 px-4 py-2">About Me</a>
+                            <a href=""
+                               className="inline-flex items-center justify-center text-sm font-medium h-10 px-4 py-2">Projects</a>
                         </nav>
+
+
                     </div>
                 </div>
             </div>
