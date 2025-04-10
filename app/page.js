@@ -42,7 +42,7 @@ export default function Home() {
                 <section className="max-w-4xl w-full px-4 text-left">
                     {/* Centered "My Skills" title within a widget */}
                     <div className=" text-white text-xl font-semibold py-3 rounded-lg mb-6 mx-auto w-full max-w-sm text-center">
-                        Languages & Tools I've worked with
+                        Languages & Tools I&apos;ve worked with
                     </div>
 
                     <div className="space-y-6">
