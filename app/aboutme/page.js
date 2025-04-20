@@ -35,6 +35,16 @@ export default function aboutme() {
             {/* Main Content */}
             <main className="flex-1 flex flex-col items-center justify-center text-center">
                 <h1 className="text-2xl font-bold text-black leading-none">About Me</h1>
+                <p className="text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center text-black block text-justify">
+                    Hi, My name is Hari!
+                    I create games, and I make them for free because I love sharing my passion with everyone.
+                    Making games is my way of unleashing my creativity, letting ideas flow, and turning them into
+                    something people can enjoy.
+                    Each game is a unique journey where I experiment, innovate, and just have fun.
+                    It’s about bringing joy to others while doing something I genuinely love.
+                    So, if you’re curious, dive into my world of free games.
+                    There’s always something exciting waiting for you!
+                </p>
             </main>
         </div>
     );
