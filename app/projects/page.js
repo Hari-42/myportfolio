@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function Projects() {
     return (
-        <div className="flex flex-col min-h-screen font-sans bg-[#5E8FB8]">
+        <div className="flex flex-col min-h-screen font-sans bg-black">
             {/* Header */}
-            <header className="bg-[#5E8FB8] text-black sm:flex sm:justify-between py-3">
+            <header className="bg-black text-white sm:flex sm:justify-between py-3">
                 <div className="px-4 lg:px-8 mx-auto w-full max-w-4xl">
                     <div className="border-b relative flex h-16 items-center justify-between w-full">
 

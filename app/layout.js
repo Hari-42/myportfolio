@@ -9,20 +9,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-        <body className="bg-white text-black">
+        <body className="bg-white text-white">
         {children}
         {/* Footer */}
-        <footer className="bg-[#5E8FB8] text-center py-8 w-full">
+        <footer className="bg-black text-center py-8 w-full">
             <div className="mx-auto w-full max-w-screen-xl p-4">
-                <hr className="my-6 border-black"/>
+                <hr className="my-6"/>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-left">
                     <div>
-                        <span className="text-2xl font-bold text-black">HARI</span>
+                        <span className="text-2xl font-bold">HARI</span>
                     </div>
 
                     <div>
-                        <h2 className="mb-4 text-2xl font-bold text-black">Resources</h2>
-                        <ul className="text-gray-800 font-medium">
+                        <h2 className="mb-4 text-2xl font-bold ">Resources</h2>
+                        <ul className=" font-medium">
                             <li className="mb-2">
                                 <a
                                     href="https://tailwindcss.com/"
@@ -35,8 +35,8 @@ export default function RootLayout({ children }) {
                     </div>
 
                     <div>
-                        <h2 className="mb-4 text-2xl font-bold text-black">Socials</h2>
-                        <ul className="text-gray-800 font-medium">
+                        <h2 className="mb-4 text-2xl font-bold">Socials</h2>
+                        <ul className=" font-medium">
                             <li className="mb-2">
                                 <a
                                     href="https://discord.gg/mjNcZFHnf5"
@@ -64,9 +64,9 @@ export default function RootLayout({ children }) {
                         </ul>
                     </div>
                 </div>
-                <hr className="my-6 border-black" />
+                <hr className="my-6" />
                 <div className="flex items-center justify-center">
-            <span className="text-sm text-gray-800">
+            <span className="text-sm">
               © 2025 MKH-GAMES All Rights Reserved.
             </span>
                 </div>

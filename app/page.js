@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 export default function Home() {
     return (
-        <div className="flex flex-col min-h-screen font-sans bg-[#5E8FB8]">
-            <header className="bg-[#5E8FB8] text-black sm:flex sm:justify-between py-3">
+        <div className="flex flex-col min-h-screen font-sans bg-black">
+            <header className="bg-black text-white sm:flex sm:justify-between py-3">
                 <div className="px-4 lg:px-8 mx-auto w-full max-w-4xl">
                     <div className="border-b relative flex h-16 items-center justify-between w-full">
 
@@ -33,8 +33,8 @@ export default function Home() {
 
             {/* Main Content */}
             <main className="flex-1 flex flex-col items-center justify-center text-center">
-                <h1 className="text-[12rem] font-bold text-black leading-none">HARI</h1>
-                <h2 className="text-xl md:text-3xl font-bold text-black mt-4 pb-8">
+                <h1 className="text-[12rem] font-bold text-white leading-none">HARI</h1>
+                <h2 className="text-xl md:text-3xl font-bold text-white mt-4 pb-8">
                     SOFTWARE / GAME DEVELOPER
                 </h2>
 

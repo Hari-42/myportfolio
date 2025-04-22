@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function aboutme() {
     return (
-        <div className="flex flex-col min-h-screen font-sans bg-[#5E8FB8]">
-            <header className="bg-[#5E8FB8] text-black sm:flex sm:justify-between py-3">
+        <div className="flex flex-col min-h-screen font-sans bg-black">
+            <header className="bg-black text-white sm:flex sm:justify-between py-3">
                 <div className="px-4 lg:px-8 mx-auto w-full max-w-4xl">
                     <div className="border-b relative flex h-16 items-center justify-between w-full">
 
@@ -34,8 +34,8 @@ export default function aboutme() {
             </header>
             {/* Main Content */}
             <main className="flex-1 flex flex-col items-center justify-center text-center">
-                <h1 className="text-2xl font-bold text-black leading-none">About Me</h1>
-                <p className="text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center text-black block text-justify">
+                <h1 className="text-2xl font-bold text-white leading-none">About Me</h1>
+                <p className="text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center text-white block text-justify">
                     Hi, My name is Hari!
                     I create games, and I make them for free because I love sharing my passion with everyone.
                     Making games is my way of unleashing my creativity, letting ideas flow, and turning them into
