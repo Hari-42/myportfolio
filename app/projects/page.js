@@ -9,9 +9,9 @@ export default function Projects() {
                     <div className="border-b relative flex h-16 items-center justify-between w-full">
 
                         <div className="flex items-center">
-                            <a href="page.js" className="flex items-center space-x-6">
+                            <Link href="/" className="flex items-center space-x-6">
                                 HARI
-                            </a>
+                            </Link>
                         </div>
 
                         <div className="flex items-center">
