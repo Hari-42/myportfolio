@@ -32,95 +32,22 @@ export default function Home() {
             </header>
 
             {/* Main Content */}
-            <main className="flex-1 flex flex-col items-center justify-center text-center">
-                <h1 className="text-[12rem] font-bold text-white leading-none">HARI</h1>
-                <h2 className="text-xl md:text-3xl font-bold text-white mt-4 pb-8">
-                    SOFTWARE / GAME DEVELOPER
-                </h2>
-
-                {/* Skills Section */}
-                <section className="max-w-4xl w-full px-4 text-left">
-                    {/* Centered "My Skills" title within a widget */}
-                    <div className=" text-white text-xl font-semibold py-3 rounded-lg mb-6 mx-auto w-full max-w-sm text-center">
-                        Languages & Tools I&apos;ve worked with
+            <main className="flex-1 flex items-center justify-center text-white px-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full">
+                    {/* left side - Text */}
+                    <div className="flex flex-col justify-center space-y-4">
+                        <h1 className="text-6xl md:text-8xl font-bold leading-none">Hello, I&#39;m Hari</h1>
+                        <p className="text-xl md:text-2xl">I&#39;m a game/software developer.</p>
                     </div>
 
-                    <div className="space-y-6">
-                        {/* Programming Languages Section */}
-                        <div className="bg-white rounded-lg shadow-lg p-6">
-                            <h4 className="text-lg font-medium text-black mb-2">Programming Languages</h4>
-                            <div className="space-y-2">
-                                <div>
-                                    <span className="font-medium text-black">HTML & CSS</span>
-                                    <div className="w-full bg-gray-300 rounded-full h-2">
-                                        <div className="bg-blue-500 h-2 rounded-full" style={{ width: '90%' }}></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <span className="font-medium text-black">Python</span>
-                                    <div className="w-full bg-gray-300 rounded-full h-2">
-                                        <div className="bg-yellow-500 h-2 rounded-full" style={{ width: '75%' }}></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <span className="font-medium text-black">C#</span>
-                                    <div className="w-full bg-gray-300 rounded-full h-2">
-                                        <div className="bg-purple-500 h-2 rounded-full" style={{ width: '80%' }}></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <span className="font-medium text-black">Java</span>
-                                    <div className="w-full bg-gray-300 rounded-full h-2">
-                                        <div className="bg-red-500 h-2 rounded-full" style={{ width: '70%' }}></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <span className="font-medium text-black">Reactjs/Nextjs</span>
-                                    <div className="w-full bg-gray-300 rounded-full h-2">
-                                        <div className="bg-green-500 h-2 rounded-full" style={{ width: '60%' }}></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Tools & Technologies */}
-                        <div className="bg-white rounded-lg shadow-lg p-6">
-                            <h4 className="text-lg font-medium text-black mb-2">Tools & Technologies</h4>
-                            <div className="space-y-2">
-                                <div>
-                                    <span className="font-medium text-black">Unity</span>
-                                    <div className="w-full bg-gray-300 rounded-full h-2">
-                                        <div className="bg-blue-600 h-2 rounded-full" style={{ width: '90%' }}></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <span className="font-medium text-black">Blender</span>
-                                    <div className="w-full bg-gray-300 rounded-full h-2">
-                                        <div className="bg-green-600 h-2 rounded-full" style={{ width: '85%' }}></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <span className="font-medium text-black">MongoDB</span>
-                                    <div className="w-full bg-gray-300 rounded-full h-2">
-                                        <div className="bg-teal-500 h-2 rounded-full" style={{ width: '70%' }}></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <span className="font-medium text-black">MySQL</span>
-                                    <div className="w-full bg-gray-300 rounded-full h-2">
-                                        <div className="bg-purple-600 h-2 rounded-full" style={{ width: '80%' }}></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <span className="font-medium text-black">TailwindCSS</span>
-                                    <div className="w-full bg-gray-300 rounded-full h-2">
-                                        <div className="bg-teal-600 h-2 rounded-full" style={{ width: '75%' }}></div>
-                                    </div>
-                                </div>
-                            </div>
+                    {/* right side - picture placeholder */}
+                    <div className="flex items-center justify-center">
+                        <div
+                            className="w-64 h-64 bg-gray-300 rounded-2xl flex items-center justify-center text-gray-700 text-xl">
+                            Picture Placeholder
                         </div>
                     </div>
-                </section>
+                </div>
             </main>
         </div>
     );
