@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function aboutme() {
+export default function contact() {
     return (
         <div className="flex flex-col min-h-screen font-sans bg-black">
             <header className="bg-black text-white sm:flex sm:justify-between py-3">
