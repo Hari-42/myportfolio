@@ -17,17 +17,19 @@ export default function aboutme() {
                             <nav className="flex items-center hidden md:block">
                                 <Link href="/"
                                       className="inline-flex items-center justify-center text-sm font-medium h-10 px-4 py-2">Home</Link>
-                                <Link href="/aboutme"
-                                      className="inline-flex items-center justify-center text-sm font-bold h-10 px-4 py-2">
-                                    About Me
-                                </Link>
                                 <Link href="/projects"
                                       className="inline-flex items-center justify-center text-sm font-medium h-10 px-4 py-2">
                                     Projects
                                 </Link>
+                                <Link href="/aboutme"
+                                      className="inline-flex items-center justify-center text-sm font-bold h-10 px-4 py-2">
+                                    About Me
+                                </Link>
+                                <Link href="/contact"
+                                      className="inline-flex items-center justify-center text-sm font-medium h-10 px-4 py-2">
+                                    Contact
+                                </Link>
                             </nav>
-
-
                         </div>
                     </div>
                 </div>
