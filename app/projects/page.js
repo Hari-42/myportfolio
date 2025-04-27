@@ -101,7 +101,7 @@ export default function Projects() {
 
                     {/* project 3 */}
                     <a
-                        href="https://gamma-dashboard.com"
+                        href="https://pdf-merger-hari-42.vercel.app/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block bg-black rounded-2xl shadow-lg p-6 text-left transition-transform hover:scale-105 hover:shadow-xl outline outline-2 outline-white"
