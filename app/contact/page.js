@@ -6,6 +6,41 @@ import { useState } from "react";
 export default function Contact() {
     const [isOpen, setIsOpen] = useState(false);
     const [submitted, setSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+
+        const form = new FormData(e.target);
+
+        const data = {
+            name: form.get('name'),
+            email: form.get('email'),
+            message: form.get('message'),
+        };
+
+        try {
+            const response = await fetch("https://formspree.io/f/xgvkyqzn", {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                setSubmitted(true);
+            } else {
+                setError("Something went wrong, please try again.");
+            }
+        } catch (err) {
+            setError("Error submitting form. Please try again.");
+        } finally {
+            setLoading(false);
+        }
+    };
 
     return (
         <div className="flex flex-col min-h-screen font-sans bg-black text-white">
@@ -65,12 +100,7 @@ export default function Contact() {
                     {/* Form Panel */}
                     <div className="bg-black text-white p-6 md:p-10 md:w-1/2 border border-white rounded-lg">
                         {!submitted ? (
-                            <form
-                                action="https://formspree.io/f/xgvkyqzn"
-                                method="POST"
-                                onSubmit={() => setSubmitted(true)}
-                                className="space-y-4"
-                            >
+                            <form onSubmit={handleSubmit} className="space-y-4">
                                 <div>
                                     <label className="block text-sm font-medium mb-1">Full Name</label>
                                     <input
@@ -101,9 +131,11 @@ export default function Contact() {
                                 <button
                                     type="submit"
                                     className="bg-black text-white px-4 py-2 hover:bg-blue-900 border border-white rounded-lg"
+                                    disabled={loading}
                                 >
-                                    Send Message
+                                    {loading ? "Sending..." : "Send Message"}
                                 </button>
+                                {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
                             </form>
                         ) : (
                             <p className="text-white">Thanks! Looking forward to connecting with you soon!</p>
