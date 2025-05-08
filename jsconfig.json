@@ -9,7 +9,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "strict": true,
-    "jsx": "react-jsx"  // This is important for JSX support
+    "jsx": "react-jsx"
   },
   "include": [
     "next-env.d.ts",
