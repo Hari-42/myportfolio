@@ -86,7 +86,9 @@ export default function Contact() {
                     {/* Info Panel */}
                     <div className="bg-black text-white p-6 md:p-10 md:w-1/2">
                         <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
-                        <p className="mb-6">Feel free to reach out for collaborations, questions, or just to say hi 👋</p>
+                        <p className="mb-6">Feel free to reach out for collaborations, questions, or just to say hi
+                            👋</p>
+                        <p className="text-red-500 mb-6">Note: use your real mail, so I can write you back</p>
                         <ul className="space-y-4 text-sm">
                             <li className="flex items-center gap-2">
                                 🖥️ Github Hari-42
