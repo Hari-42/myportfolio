@@ -65,7 +65,7 @@ export default function Aboutme() {
                 {/* Piano Playing */}
                 <div className="flex flex-col md:flex-row items-center mb-16 max-w-6xl w-full gap-8 text-white">
                     <img
-                        src="piano.jpg"
+                        src="/piano.jpg"
                         alt="playing piano"
                         className="w-full md:w-1/2 rounded-xl shadow-lg"
                     />
@@ -82,7 +82,7 @@ export default function Aboutme() {
                 {/* Fitness */}
                 <div className="flex flex-col md:flex-row-reverse items-center mb-16 max-w-6xl w-full gap-8 text-white">
                     <img
-                        src="fitness.jpg"
+                        src="/fitness.jpg"
                         alt="Fitness"
                         className="w-full md:w-1/2 rounded-xl shadow-lg"
                     />
@@ -99,7 +99,7 @@ export default function Aboutme() {
                 {/* Game Development */}
                 <div className="flex flex-col md:flex-row items-center mb-16 max-w-6xl w-full gap-8 text-white">
                     <img
-                        src="superflexagon.png"
+                        src="/superflexagon.png"
                         alt="Game Development"
                         className="w-full md:w-1/2 rounded-xl shadow-lg"
                     />
