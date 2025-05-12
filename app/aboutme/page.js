@@ -49,7 +49,8 @@ export default function Aboutme() {
 
                 <p className="text-lg leading-relaxed mb-6 max-w-3xl mx-auto text-center text-white block text-justify">
                     Hi, My name is Hari!
-                    I create games and applications, and I make them for free because I love sharing my passion with everyone.
+                    I create games and applications, and I make them for free because I love sharing my passion with
+                    everyone.
                     Programming is my way of unleashing my creativity, letting ideas flow, and turning them into
                     something people can enjoy.
                     Each project is a unique journey where I experiment, innovate, and just have fun.
@@ -57,6 +58,62 @@ export default function Aboutme() {
                     So, if you’re curious, dive into my applications and games.
                     There’s always something exciting waiting for you!
                 </p>
+
+
+                <h1 className="text-4xl font-bold text-center mb-10 pt-20">Hobbies</h1>
+
+                {/* Piano Playing */}
+                <div className="flex flex-col md:flex-row items-center mb-16 max-w-6xl w-full gap-8 text-white">
+                    <img
+                        src="piano.jpg"
+                        alt="playing piano"
+                        className="w-full md:w-1/2 rounded-xl shadow-lg"
+                    />
+                    <div className="md:w-1/2">
+                        <h2 className="text-2xl font-bold mb-2 text-center md:text-left">Playing piano</h2>
+                        <p className="text-lg leading-relaxed text-justify">
+                            Playing piano lets me express emotions I can&#39;t always put into words. Whether it&#39;s classical melodies or spontaneous improvisations,
+                            every session is a new emotional journey. It helps me reset my mind, focus better, and fuels my creativity in other
+                            parts of life like programming. There&#39;s something incredibly satisfying about building harmony from silence.
+                        </p>
+                    </div>
+                </div>
+
+                {/* Fitness */}
+                <div className="flex flex-col md:flex-row-reverse items-center mb-16 max-w-6xl w-full gap-8 text-white">
+                    <img
+                        src="fitness.jpg"
+                        alt="Fitness"
+                        className="w-full md:w-1/2 rounded-xl shadow-lg"
+                    />
+                    <div className="md:w-1/2">
+                        <h2 className="text-2xl font-bold mb-2 text-center md:text-left">Fitness</h2>
+                        <p className="text-lg leading-relaxed text-justify">
+                            Fitness is my anchor, it grounds me, strengthens me, and keeps me energized. While lifting weights, every rep is a reminder of growth and discipline.
+                            It&#39;s not just about physical strength, but also mental clarity and emotional resilience. The consistency of fitness
+                            carries over into my projects, making me more focused and persistent. It&#39;s my way of staying sharp and balanced.
+                        </p>
+                    </div>
+                </div>
+
+                {/* Game Development */}
+                <div className="flex flex-col md:flex-row items-center mb-16 max-w-6xl w-full gap-8 text-white">
+                    <img
+                        src="superflexagon.png"
+                        alt="Game Development"
+                        className="w-full md:w-1/2 rounded-xl shadow-lg"
+                    />
+                    <div className="md:w-1/2">
+                        <h2 className="text-2xl font-bold mb-2 text-center md:text-left">Game Development</h2>
+                        <p className="text-lg leading-relaxed text-justify">
+                            Game development is a way to express my creativity, just like designing levels, storytelling and code into an immersive experience.
+                            It challenges every part of my brain, from logical thinking to artistic vision. I love creating worlds that players
+                            can explore, shaping mechanics that are fun and intuitive, and watching ideas evolve into interactive adventures.
+                            Every bug fixed and every level completed is a tiny victory. It’s more than a hobby, it’s a passion that lets me
+                            build joy for others.
+                        </p>
+                    </div>
+                </div>
             </main>
         </div>
     );
