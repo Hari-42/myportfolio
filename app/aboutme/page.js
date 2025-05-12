@@ -59,7 +59,7 @@ export default function Aboutme() {
                     There’s always something exciting waiting for you!
                 </p>
 
-
+                {/* Hobbies */}
                 <h1 className="text-4xl font-bold text-center mb-10 pt-20">Hobbies</h1>
 
                 {/* Piano Playing */}
@@ -109,8 +109,63 @@ export default function Aboutme() {
                             Game development is a way to express my creativity, just like designing levels, storytelling and code into an immersive experience.
                             It challenges every part of my brain, from logical thinking to artistic vision. I love creating worlds that players
                             can explore, shaping mechanics that are fun and intuitive, and watching ideas evolve into interactive adventures.
-                            Every bug fixed and every level completed is a tiny victory. It’s more than a hobby, it’s a passion that lets me
-                            build joy for others.
+                            Every bug fixed and every level completed is a tiny victory. It’s more than a hobby, it&#39;s a passion that lets me
+                            build joy for others. This is a picture is from my game, it is called SUPER-FLEXAGON. It&#39;s my first game.
+                        </p>
+                    </div>
+                </div>
+
+
+                {/* Interests */}
+                <h1 className="text-4xl font-bold text-center mb-10 pt-20">Interests</h1>
+
+                {/* Psychology */}
+                <div className="flex flex-col md:flex-row items-center mb-16 max-w-6xl w-full gap-8 text-white">
+                    <img
+                        src="/psychology.jpg"
+                        alt="Psychology"
+                        className="w-full md:w-1/2 rounded-xl shadow-lg"
+                    />
+                    <div className="md:w-1/2">
+                        <h2 className="text-2xl font-bold mb-2 text-center md:text-left">Psychology & The Human Mind</h2>
+                        <p className="text-lg leading-relaxed text-justify">
+                            I’m fascinated by how the human mind works, how we think, feel, and make decisions. Exploring cognitive patterns, emotions, and behaviors opens
+                            up a deeper understanding of ourselves and others. The complexity of the brain and the subtle intricacies of human psychology are
+                            both humbling and inspiring. It&#39;s a field that constantly reminds me of how magnificent and mysterious the mind truly is.
+                        </p>
+                    </div>
+                </div>
+
+                {/* Filmmaking */}
+                <div className="flex flex-col md:flex-row-reverse items-center mb-16 max-w-6xl w-full gap-8 text-white">
+                    <img
+                        src="/filmmaking.jpg"
+                        alt="Filmmaking"
+                        className="w-full md:w-1/2 rounded-xl shadow-lg"
+                    />
+                    <div className="md:w-1/2">
+                        <h2 className="text-2xl font-bold mb-2 text-center md:text-left">Filmmaking & Storytelling</h2>
+                        <p className="text-lg leading-relaxed text-justify">
+                            Filmmaking excites me because it&#39;s a perfect blend of art and technology. Whether it&#39;s visual effects, editing, or storytelling, each part contributes
+                            to building immersive and emotional narratives. I love how every frame, sound, and transition can be used to guide the viewer’s experience.
+                            It&#39;s a powerful way to connect with others and bring stories to life.
+                        </p>
+                    </div>
+                </div>
+
+                {/* Astrophysics */}
+                <div className="flex flex-col md:flex-row items-center mb-16 max-w-6xl w-full gap-8 text-white">
+                    <img
+                        src="/astrophysics.jpg"
+                        alt="Astrophysics"
+                        className="w-full md:w-1/2 rounded-xl shadow-lg"
+                    />
+                    <div className="md:w-1/2">
+                        <h2 className="text-2xl font-bold mb-2 text-center md:text-left">Astrophysics & The Universe</h2>
+                        <p className="text-lg leading-relaxed text-justify">
+                            The universe is vast and full of mysteries, and astrophysics is my way of exploring those. I&#39;m endlessly curious about stars, black holes,
+                            galaxies, and the laws that govern everything. Thinking about space and our place in the cosmos sparks both awe and wonder in me.
+                            It’s a subject that constantly reminds me how little we know and how much more there is to learn.
                         </p>
                     </div>
                 </div>
