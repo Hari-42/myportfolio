@@ -94,7 +94,7 @@ export default function Contact() {
                                 🖥️ Github Hari-42
                             </li>
                             <li className="flex items-center gap-2">
-                                📍 Zurich, CH
+                                📍 Switzerland
                             </li>
                         </ul>
                     </div>
