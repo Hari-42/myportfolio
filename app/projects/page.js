@@ -126,50 +126,6 @@ export default function Projects() {
                     </a>
                 </div>
 
-                <h1 className="text-3xl font-bold text-white mb-8">Certifications</h1>
-
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl w-full">
-                    {/* certification 1 */}
-                    <a
-                        href="/B2_Cambridge.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="rounded-2xl bg-black/50 backdrop-blur-md shadow-lg p-4 transition-transform hover:scale-105 hover:shadow-2xl w-full text-white outline outline-2 outline-white"
-                    >
-                        <div
-                            className="flex flex-col items-center justify-center bg-gradient-to-r from-blue-800 via-indigo-900 to-purple-900 rounded-xl py-6 mb-4 hover:opacity-90 transition-opacity">
-                            <FaFilePdf className="text-white text-4xl mb-2"/>
-                            <span className="bg-white/10 px-4 py-1 rounded-full text-sm">Click to view PDF</span>
-                        </div>
-                        <div className="px-1 text-center md:text-left ">
-                            <h3 className="text-lg font-semibold">B2 - Cambridge</h3>
-                            <p className="text-sm opacity-80">Cambridge English Qualification</p>
-                            <p className="text-sm opacity-50">2022</p>
-                        </div>
-                    </a>
-
-                    {/* certification 2 */}
-                    <a
-                        href="/DELF_B1.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="rounded-2xl bg-black/50 backdrop-blur-md shadow-lg p-4 transition-transform hover:scale-105 hover:shadow-2xl w-full text-white outline outline-2 outline-white"
-                    >
-                        <div
-                            className="flex flex-col items-center justify-center bg-gradient-to-r from-emerald-700 via-green-800 to-teal-900 rounded-xl py-6 mb-4 hover:opacity-90 transition-opacity">
-                            <FaFilePdf className="text-white text-4xl mb-2"/>
-                            <span className="bg-white/10 px-4 py-1 rounded-full text-sm">Click to view PDF</span>
-                        </div>
-                        <div className="px-1 text-center md:text-left">
-                            <h3 className="text-lg font-semibold">B1 - DELF</h3>
-                            <p className="text-sm opacity-80">French Language Certification</p>
-                            <p className="text-sm opacity-50">2025</p>
-                        </div>
-                    </a>
-                </div>
-
-
             </main>
         </div>
     );
