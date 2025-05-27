@@ -59,11 +59,18 @@ export default function Projects() {
                         <p className="text-lg leading-relaxed text-justify mb-4">
                             This is a collection of games that I have developed, showcasing my creativity in games.
                         </p>
+                        {/* Buttons */}
                         <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                             <a href="https://mkh-games.vercel.app/index.html" target="_blank" rel="noopener noreferrer"
                                className="bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-300 transition">Homepage</a>
                             <a href="https://harigamesdev.itch.io/" target="_blank" rel="noopener noreferrer"
                                className="bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-300 transition">Download Site</a>
+                        </div>
+                        {/* Tags */}
+                        <div className="flex flex-wrap gap-2 mt-4 justify-center md:justify-start">
+                            <span className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">Unity</span>
+                            <span className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">C#</span>
+                            <span className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">Blender</span>
                         </div>
                     </div>
                 </div>
@@ -76,11 +83,18 @@ export default function Projects() {
                         <p className="text-lg leading-relaxed text-justify mb-4">
                             A group project about the differences between the start-up scenes in Zurich and Silicon Valley.
                         </p>
+                        {/* Buttons */}
                         <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                             <a href="https://start-up-szene-zh-vs-sv.vercel.app/" target="_blank" rel="noopener noreferrer"
                                className="bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-300 transition">Website</a>
                             <a href="https://github.com/Hari-42/PRWR_Facharbeit" target="_blank" rel="noopener noreferrer"
                                className="bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-300 transition">Source</a>
+                        </div>
+                        {/* Tags */}
+                        <div className="flex flex-wrap gap-2 mt-4 justify-center md:justify-start">
+                            <span className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">HTML</span>
+                            <span className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">Tailwind/CSS</span>
+                            <span className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">Jacascript</span>
                         </div>
                     </div>
                 </div>
@@ -93,11 +107,18 @@ export default function Projects() {
                         <p className="text-lg leading-relaxed text-justify mb-4">
                             A free PDF merging tool available online.
                         </p>
+                        {/* Buttons */}
                         <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                             <a href="https://pdf-merger-hari-42.vercel.app/" target="_blank" rel="noopener noreferrer"
                                className="bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-300 transition">Website</a>
                             <a href="https://github.com/Hari-42/PDF-Merger" target="_blank" rel="noopener noreferrer"
                                className="bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-300 transition">Source</a>
+                        </div>
+                        {/* Tags */}
+                        <div className="flex flex-wrap gap-2 mt-4 justify-center md:justify-start">
+                            <span className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">HTML</span>
+                            <span className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">Tailwind</span>
+                            <span className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">Jacascript</span>
                         </div>
                     </div>
                 </div>
