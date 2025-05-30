@@ -4,8 +4,67 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 
+const projects = [
+    {
+        title: "MKH-GAMES",
+        description: "This is a collection of games that I have developed, showcasing my creativity in games.",
+        image: "/mkhgames.jpg",
+        links: [
+            { label: "Homepage", href: "https://mkh-games.vercel.app/index.html" },
+            { label: "Download Site", href: "https://harigamesdev.itch.io/" }
+        ],
+        tags: ["Unity", "C#", "Blender"]
+    },
+    {
+        title: "PRWR-Facharbeit",
+        description: "A group project about the differences between the start-up scenes in Zurich and Silicon Valley.",
+        image: "/startup.jpg",
+        links: [
+            { label: "Website", href: "https://start-up-szene-zh-vs-sv.vercel.app/" },
+            { label: "Source", href: "https://github.com/Hari-42/PRWR_Facharbeit" }
+        ],
+        tags: ["HTML", "Tailwind", "JavaScript", "CSS"]
+    },
+    {
+        title: "PDF-Merger",
+        description: "A free PDF merging tool available online.",
+        image: "/pdf.jpg",
+        links: [
+            { label: "Website", href: "https://pdf-merger-hari-42.vercel.app/" },
+            { label: "Source", href: "https://github.com/Hari-42/PDF-Merger" }
+        ],
+        tags: ["HTML", "Tailwind", "JavaScript"]
+    },
+    {
+        title: "catchmeifyoucan",
+        description: "A javascript short game ,where you can't click the button.",
+        image: "/catchme.png",
+        links: [
+            { label: "Website", href: "https://catchmeifyoucan-one.vercel.app/" },
+            { label: "Source", href: "https://github.com/Hari-42/catchmeifyoucan" }
+        ],
+        tags: ["HTML", "CSS", "JavaScript"]
+    },
+    {
+        title: "Other Projects",
+        description: "You can see my other projects on my GitHub.",
+        image: "/github.jpg",
+        links: [
+            { label: "Github", href: "https://github.com/Hari-42" }
+        ],
+        tags: []
+    }
+];
+
 export default function Projects() {
     const [isOpen, setIsOpen] = useState(false);
+    const [activeFilter, setActiveFilter] = useState("All");
+
+    const allTags = Array.from(new Set(projects.flatMap(p => p.tags))).sort();
+
+    const filteredProjects = activeFilter === "All"
+        ? projects
+        : projects.filter(project => project.tags.includes(activeFilter));
 
     return (
         <div className="flex flex-col min-h-screen font-sans bg-black text-white">
@@ -17,7 +76,6 @@ export default function Projects() {
                             <Link href="/" className="flex items-center space-x-2 text-lg font-bold">HARI</Link>
                         </div>
 
-                        {/* Desktop Nav */}
                         <nav className="hidden md:flex space-x-4">
                             <Link href="/" className="inline-flex items-center text-sm font-medium h-10 px-4 py-2">Home</Link>
                             <Link href="/projects" className="inline-flex items-center text-sm font-bold h-10 px-4 py-2">Projects</Link>
@@ -25,7 +83,6 @@ export default function Projects() {
                             <Link href="/contact" className="inline-flex items-center text-sm font-medium h-10 px-4 py-2">Contact</Link>
                         </nav>
 
-                        {/* Mobile menu button */}
                         <div className="md:hidden flex items-center">
                             <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none">
                                 <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -35,7 +92,6 @@ export default function Projects() {
                         </div>
                     </div>
 
-                    {/* Mobile Menu */}
                     {isOpen && (
                         <div className="md:hidden mt-2 space-y-2">
                             <Link href="/" className="block text-sm font-medium py-2">Home</Link>
@@ -49,95 +105,47 @@ export default function Projects() {
 
             {/* Main Content */}
             <main className="flex-1 flex flex-col items-center justify-start px-6 py-12">
-                <h1 className="text-4xl font-bold text-center mb-10">Projects</h1>
+                <h1 className="text-4xl font-bold text-center mb-6">Projects</h1>
 
-                {/* Project 1 */}
-                <div className="flex flex-col md:flex-row items-center mb-16 max-w-6xl w-full gap-8">
-                    <Image src="/mkhgames.jpg" alt="MKH Games" width={600} height={400} className="w-full md:w-1/2 rounded-xl shadow-lg" />
-                    <div className="md:w-1/2">
-                        <h2 className="text-2xl font-bold mb-2 text-center md:text-left text-[#5E8FB8]">MKH-GAMES</h2>
-                        <p className="text-lg leading-relaxed text-justify mb-4">
-                            This is a collection of games that I have developed, showcasing my creativity in games.
-                        </p>
-                        {/* Buttons */}
-                        <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                            <a href="https://mkh-games.vercel.app/index.html" target="_blank" rel="noopener noreferrer"
-                               className="bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-300 transition">Homepage</a>
-                            <a href="https://harigamesdev.itch.io/" target="_blank" rel="noopener noreferrer"
-                               className="bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-300 transition">Download Site</a>
-                        </div>
-                        {/* Tags */}
-                        <div className="flex flex-wrap gap-2 mt-4 justify-center md:justify-start">
-                            <span className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">Unity</span>
-                            <span className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">C#</span>
-                            <span className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">Blender</span>
-                        </div>
-                    </div>
+                {/* Dropdown Filter */}
+                <div className="flex justify-end w-full max-w-6xl mb-10">
+                    <select
+                        value={activeFilter}
+                        onChange={(e) => setActiveFilter(e.target.value)}
+                        className="bg-black text-white border border-white px-4 py-2 rounded-md"
+                    >
+                        <option value="All">All</option>
+                        {allTags.map(tag => (
+                            <option key={tag} value={tag}>{tag}</option>
+                        ))}
+                    </select>
                 </div>
 
-                {/* Project 2 */}
-                <div className="flex flex-col md:flex-row-reverse items-center mb-16 max-w-6xl w-full gap-8">
-                    <Image src="/startup.jpg" alt="Startup Project" width={600} height={400} className="w-full md:w-1/2 rounded-xl shadow-lg" />
-                    <div className="md:w-1/2">
-                        <h2 className="text-2xl font-bold mb-2 text-center md:text-left text-[#5E8FB8]">PRWR-Facharbeit</h2>
-                        <p className="text-lg leading-relaxed text-justify mb-4">
-                            A group project about the differences between the start-up scenes in Zurich and Silicon Valley.
-                        </p>
-                        {/* Buttons */}
-                        <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                            <a href="https://start-up-szene-zh-vs-sv.vercel.app/" target="_blank" rel="noopener noreferrer"
-                               className="bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-300 transition">Website</a>
-                            <a href="https://github.com/Hari-42/PRWR_Facharbeit" target="_blank" rel="noopener noreferrer"
-                               className="bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-300 transition">Source</a>
-                        </div>
-                        {/* Tags */}
-                        <div className="flex flex-wrap gap-2 mt-4 justify-center md:justify-start">
-                            <span className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">HTML</span>
-                            <span className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">Tailwind/CSS</span>
-                            <span className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">Jacascript</span>
+                {/* Filtered Projects */}
+                {filteredProjects.map((project, idx) => (
+                    <div key={idx} className={`flex flex-col ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center mb-16 max-w-6xl w-full gap-8`}>
+                        <Image src={project.image} alt={project.title} width={600} height={400} className="w-full md:w-1/2 rounded-xl shadow-lg" />
+                        <div className="md:w-1/2">
+                            <h2 className="text-2xl font-bold mb-2 text-center md:text-left text-[#5E8FB8]">{project.title}</h2>
+                            <p className="text-lg leading-relaxed text-justify mb-4">{project.description}</p>
+                            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                                {project.links.map((link, linkIdx) => (
+                                    <a key={linkIdx} href={link.href} target="_blank" rel="noopener noreferrer"
+                                       className="bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-300 transition">{link.label}</a>
+                                ))}
+                            </div>
+                            <div className="flex flex-wrap gap-2 mt-4 justify-center md:justify-start">
+                                {project.tags.map((tag, tagIdx) => (
+                                    <span key={tagIdx} className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">{tag}</span>
+                                ))}
+                            </div>
                         </div>
                     </div>
-                </div>
+                ))}
 
-                {/* Project 3 */}
-                <div className="flex flex-col md:flex-row items-center mb-16 max-w-6xl w-full gap-8">
-                    <Image src="/pdf.jpg" alt="PDF Merger" width={600} height={400} className="w-full md:w-1/2 rounded-xl shadow-lg" />
-                    <div className="md:w-1/2">
-                        <h2 className="text-2xl font-bold mb-2 text-center md:text-left text-[#5E8FB8]">PDF-Merger</h2>
-                        <p className="text-lg leading-relaxed text-justify mb-4">
-                            A free PDF merging tool available online.
-                        </p>
-                        {/* Buttons */}
-                        <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                            <a href="https://pdf-merger-hari-42.vercel.app/" target="_blank" rel="noopener noreferrer"
-                               className="bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-300 transition">Website</a>
-                            <a href="https://github.com/Hari-42/PDF-Merger" target="_blank" rel="noopener noreferrer"
-                               className="bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-300 transition">Source</a>
-                        </div>
-                        {/* Tags */}
-                        <div className="flex flex-wrap gap-2 mt-4 justify-center md:justify-start">
-                            <span className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">HTML</span>
-                            <span className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">Tailwind</span>
-                            <span className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">Jacascript</span>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Project 4 */}
-                <div className="flex flex-col md:flex-row-reverse items-center mb-16 max-w-6xl w-full gap-8">
-                    <Image src="/github.jpg" alt="GitHub Projects" width={600} height={400} className="w-full md:w-1/2 rounded-xl shadow-lg" />
-                    <div className="md:w-1/2">
-                        <h2 className="text-2xl font-bold mb-2 text-center md:text-left text-[#5E8FB8]">Other Projects</h2>
-                        <p className="text-lg leading-relaxed text-justify mb-4">
-                            You can see my other projects on my GitHub.
-                        </p>
-                        <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                            <a href="https://github.com/Hari-42" target="_blank" rel="noopener noreferrer"
-                               className="bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-300 transition">Github</a>
-                        </div>
-                    </div>
-                </div>
-
+                {filteredProjects.length === 0 && (
+                    <p className="text-center text-gray-400 text-lg mt-8">No projects match the selected filter.</p>
+                )}
             </main>
         </div>
     );
