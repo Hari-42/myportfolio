@@ -36,13 +36,22 @@ const projects = [
         tags: ["HTML", "Tailwind", "JavaScript"]
     },
     {
-        title: "experimentthreejs",
+        title: "learning_pytest",
+        description: "During my Python exams, we used Pytest for testing. That got me curious, so I decided to learn it. Around the same time, my brother was interested into learning code, so I started it as a learning project.",
+        image: "/pytest.png",
+        links: [
+            { label: "Source", href: "https://github.com/Hari-42/learning_pytest" }
+        ],
+        tags: ["Python"]
+    },
+    {
+        title: "experimentwiththreejs",
         description: "This is a playground for me to play and experiment around with three js.",
         image: "/threejs.png",
         links: [
-            { label: "Source", href: "https://github.com/Hari-42/calculatorwithui" }
+            { label: "Source", href: "https://github.com/Hari-42/experimentwiththreejs" }
         ],
-        tags: ["Next js","threejs"]
+        tags: ["Next js","Threejs"]
     },
     {
         title: "calculatorwithui",
@@ -52,6 +61,15 @@ const projects = [
             { label: "Source", href: "https://github.com/Hari-42/calculatorwithui" }
         ],
         tags: ["Python"]
+    },
+    {
+        title: "URL-Shortener",
+        description: "I made a URL-Shortener, which shortens long URLs. I have made one, only to know how it works. It doesn't work, because I don't own a server.",
+        image: "/urlshorten.png",
+        links: [
+            { label: "Source", href: "https://github.com/Hari-42/URL_Shortener" }
+        ],
+        tags: ["HTML", "Tailwind", "Golang"]
     },
     {
         title: "stopwatch",
