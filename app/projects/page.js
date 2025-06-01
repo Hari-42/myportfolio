@@ -36,6 +36,33 @@ const projects = [
         tags: ["HTML", "Tailwind", "JavaScript"]
     },
     {
+        title: "experimentthreejs",
+        description: "This is a playground for me to play and experiment around with three js.",
+        image: "/threejs.png",
+        links: [
+            { label: "Source", href: "https://github.com/Hari-42/calculatorwithui" }
+        ],
+        tags: ["Next js","threejs"]
+    },
+    {
+        title: "calculatorwithui",
+        description: "I made a calculator with Python. I used tkinter, which is a python library, for the U.I",
+        image: "/calc.png",
+        links: [
+            { label: "Source", href: "https://github.com/Hari-42/calculatorwithui" }
+        ],
+        tags: ["Python"]
+    },
+    {
+        title: "stopwatch",
+        description: "I made a stopwatch with Kotlin, to learn Kotlin.",
+        image: "/stopwatch.png",
+        links: [
+            { label: "Source", href: "https://github.com/Hari-42/stopwatch" }
+        ],
+        tags: ["Kotlin"]
+    },
+    {
         title: "catchmeifyoucan",
         description: "A javascript short game ,where you can't click the button.",
         image: "/catchme.png",
