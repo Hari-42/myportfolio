@@ -16,16 +16,6 @@ const projects = [
         tags: ["Unity", "C#", "Blender"]
     },
     {
-        title: "PRWR-Facharbeit",
-        description: "A group project about the differences between the start-up scenes in Zurich and Silicon Valley.",
-        image: "/startup.jpg",
-        links: [
-            { label: "Website", href: "https://start-up-szene-zh-vs-sv.vercel.app/" },
-            { label: "Source", href: "https://github.com/Hari-42/PRWR_Facharbeit" }
-        ],
-        tags: ["HTML", "Tailwind", "JavaScript", "CSS"]
-    },
-    {
         title: "PDF-Merger",
         description: "A free PDF merging tool available online.",
         image: "/pdf.jpg",
@@ -34,6 +24,15 @@ const projects = [
             { label: "Source", href: "https://github.com/Hari-42/PDF-Merger" }
         ],
         tags: ["HTML", "Tailwind", "JavaScript"]
+    },
+    {
+        title: "SUPER-FLEXAGON",
+        description: "This is my first game I ever released.",
+        image: "/superflex.png",
+        links: [
+            { label: "Download", href: "https://harigamesdev.itch.io/super-flexagon" }
+        ],
+        tags: ["Unity","C#"]
     },
     {
         title: "learning_pytest",
@@ -54,6 +53,15 @@ const projects = [
         tags: ["Next js","Threejs"]
     },
     {
+        title: "MEGA-SHOOTER",
+        description: "This is a top-down shooter game. Which is designed like a aim trainer.",
+        image: "/megashoot.png",
+        links: [
+            { label: "Download", href: "https://harigamesdev.itch.io/mega-shooter" }
+        ],
+        tags: ["Unity","C#"]
+    },
+    {
         title: "calculatorwithui",
         description: "I made a calculator with Python. I used tkinter, which is a python library, for the U.I",
         image: "/calc.png",
@@ -61,6 +69,25 @@ const projects = [
             { label: "Source", href: "https://github.com/Hari-42/calculatorwithui" }
         ],
         tags: ["Python"]
+    },
+    {
+        title: "PRWR-Facharbeit",
+        description: "A group project about the differences between the start-up scenes in Zurich and Silicon Valley.",
+        image: "/startup.jpg",
+        links: [
+            { label: "Website", href: "https://start-up-szene-zh-vs-sv.vercel.app/" },
+            { label: "Source", href: "https://github.com/Hari-42/PRWR_Facharbeit" }
+        ],
+        tags: ["HTML", "Tailwind", "JavaScript", "CSS"]
+    },
+    {
+        title: "AZTEROIDS",
+        description: "Azteroids is a fixed-shooter, you have to shoot down the asteroids to get points.",
+        image: "/azteroids.png",
+        links: [
+            { label: "Download", href: "https://harigamesdev.itch.io/azteroids" }
+        ],
+        tags: ["Unity","C#"]
     },
     {
         title: "URL-Shortener",
