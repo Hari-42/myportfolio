@@ -48,7 +48,18 @@ const projects = [
         description: "This is a playground for me to play and experiment around with three js.",
         image: "/threejs.png",
         links: [
+            { label: "Website", href: "https://pdf-merger-hari-42.vercel.app/" },
             { label: "Source", href: "https://github.com/Hari-42/experimentwiththreejs" }
+        ],
+        tags: ["Next js","Threejs"]
+    },
+    {
+        title: "Web-Music-Player",
+        description: "It is a Music PLayer on web made with react. It was made as a group project with two friends of mine.",
+        image: "/threejs.png",
+        links: [
+            { label: "Website", href: "https://music-player-inky.vercel.app/" },
+            { label: "Source", href: "https://github.com/mattadosss/Music-Player" }
         ],
         tags: ["Next js","Threejs"]
     },
