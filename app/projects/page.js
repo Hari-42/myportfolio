@@ -48,7 +48,7 @@ const projects = [
         description: "This is a playground for me to play and experiment around with three js.",
         image: "/threejs.png",
         links: [
-            { label: "Website", href: "https://pdf-merger-hari-42.vercel.app/" },
+            { label: "Website", href: "https://experimentwiththreejs.vercel.app/" },
             { label: "Source", href: "https://github.com/Hari-42/experimentwiththreejs" }
         ],
         tags: ["Next js","Threejs"]
