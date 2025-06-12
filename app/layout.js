@@ -6,69 +6,48 @@ export const metadata = {
     description: "Portfolio site of Hari, Software/Game Developer",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({children}) {
     return (
         <html lang="en">
         <body className="bg-white text-white">
         {children}
         {/* Footer */}
-        <footer className="bg-black text-center py-8 w-full">
+        <footer className="bg-black text-white pt-8 w-full">
             <div className="px-4 lg:px-8 mx-auto w-full max-w-7xl p-4">
-            <hr className="my-6"/>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-left">
-                    <div>
-                        <span className="text-2xl font-bold">HARI</span>
-                    </div>
-
-                    <div>
-                        <h2 className="mb-4 text-2xl font-bold ">Resources</h2>
-                        <ul className=" font-medium">
-                            <li className="mb-2">
-                                <a
-                                    href="https://tailwindcss.com/"
-                                    className="hover:text-blue-500 transition-colors duration-300"
-                                >
-                                    Tailwind CSS
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h2 className="mb-4 text-2xl font-bold">Socials</h2>
-                        <ul className=" font-medium">
-                            <li className="mb-2">
-                                <a
-                                    href="https://discord.gg/mjNcZFHnf5"
-                                    className="hover:text-blue-500 transition-colors duration-300"
-                                >
-                                    Discord - Community Server
-                                </a>
-                            </li>
-                            <li className="mb-2">
-                                <a
-                                    href="https://github.com/Hari-42"
-                                    className="hover:text-blue-500 transition-colors duration-300"
-                                >
-                                    Github - Hari-42
-                                </a>
-                            </li>
-                            <li className="mb-2">
-                                <a
-                                    href="https://mkh-games.vercel.app/"
-                                    className="hover:text-blue-500 transition-colors duration-300"
-                                >
-                                    Games - MKH-GAMES
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
                 <hr className="my-6" />
-                <div className="flex items-center justify-center">
-            <span className="text-sm">
-              © 2025 MKH-GAMES All Rights Reserved.
-            </span>
+
+                <div className="flex items-center justify-between">
+                    <div className="text-2xl font-bold">HARI</div>
+
+                    <span className="text-sm">
+        © 2025 MKH-GAMES All Rights Reserved.
+      </span>
+
+                    <div className="flex items-center space-x-4">
+                        <a
+                            href="https://github.com/Hari-42"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub Hari-42"
+                            className="hover:text-blue-500 transition-colors duration-300"
+                        >
+                            <img
+                                src="https://cdn.simpleicons.org/github/FFFFFF"
+                                alt="GitHub"
+                                className="w-6 h-6"
+                            />
+                        </a>
+
+                        <a
+                            href="https://mkh-games.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-blue-500 transition-colors duration-300 text-2xl"
+                        >
+                            🔗
+                        </a>
+
+                    </div>
                 </div>
             </div>
         </footer>
