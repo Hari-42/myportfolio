@@ -20,7 +20,7 @@ export default function RootLayout({children}) {
                     <div className="text-2xl font-bold">HARI</div>
 
                     <span className="text-sm">
-        © 2025 MKH-GAMES All Rights Reserved.
+        © 2025 HARI, All Rights Reserved.
       </span>
 
                     <div className="flex items-center space-x-4">
