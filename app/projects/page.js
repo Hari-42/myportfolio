@@ -51,7 +51,7 @@ const projects = [
             { label: "Website", href: "https://experimentwiththreejs.vercel.app/" },
             { label: "Source", href: "https://github.com/Hari-42/experimentwiththreejs" }
         ],
-        tags: ["Next js","Threejs"]
+        tags: ["Next js","Threejs","Blender"]
     },
     {
         title: "Web-Music-Player",
@@ -61,7 +61,7 @@ const projects = [
             { label: "Website", href: "https://music-player-inky.vercel.app/" },
             { label: "Source", href: "https://github.com/mattadosss/Music-Player" }
         ],
-        tags: ["React","Tailwind","Javascript"]
+        tags: ["React","Tailwind","JavaScript"]
     },
     {
         title: "MEGA-SHOOTER",
