@@ -11,18 +11,18 @@ export default function Aboutme() {
     return (
         <div className="flex flex-col min-h-screen font-sans bg-black text-white">
             <header className="bg-black text-white py-3">
-                <div className="px-4 lg:px-8 mx-auto w-full max-w-4xl">
+                <div className="px-4 lg:px-8 mx-auto w-full max-w-7xl pb-2">
                     <div className="border-b relative flex h-16 items-center justify-between w-full">
                         <div className="flex items-center">
-                            <Link href="/" className="flex items-center space-x-2 text-lg font-bold">
+                            <Link href="/" className="flex items-center space-x-2 text-2xl font-bold">
                                 HARI
                             </Link>
                         </div>
                         <nav className="hidden md:flex space-x-4">
-                            <Link href="/" className="inline-flex items-center text-sm font-medium h-10 px-4 py-2">Home</Link>
-                            <Link href="/projects" className="inline-flex items-center text-sm font-medium h-10 px-4 py-2">Projects</Link>
-                            <Link href="/aboutme" className="inline-flex items-center text-sm font-bold h-10 px-4 py-2">About Me</Link>
-                            <Link href="/contact" className="inline-flex items-center text-sm font-medium h-10 px-4 py-2">Contact</Link>
+                            <Link href="/" className="inline-flex items-center text-lg font-medium h-10 px-4 py-2">Home</Link>
+                            <Link href="/projects" className="inline-flex items-center text-lg font-medium h-10 px-4 py-2">Projects</Link>
+                            <Link href="/aboutme" className="inline-flex items-center text-lg font-bold h-10 px-4 py-2">About Me</Link>
+                            <Link href="/contact" className="inline-flex items-center text-lg font-medium h-10 px-4 py-2">Contact</Link>
                         </nav>
                         <div className="md:hidden flex items-center">
                             <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none">

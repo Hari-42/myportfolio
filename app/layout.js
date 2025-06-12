@@ -13,8 +13,8 @@ export default function RootLayout({ children }) {
         {children}
         {/* Footer */}
         <footer className="bg-black text-center py-8 w-full">
-            <div className="mx-auto w-full max-w-screen-xl p-4">
-                <hr className="my-6"/>
+            <div className="px-4 lg:px-8 mx-auto w-full max-w-7xl p-4">
+            <hr className="my-6"/>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-left">
                     <div>
                         <span className="text-2xl font-bold">HARI</span>
