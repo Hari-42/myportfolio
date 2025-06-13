@@ -20,7 +20,7 @@ export default function RootLayout({children}) {
                     <div className="text-2xl font-bold">HARI</div>
 
                     <span className="text-sm">
-        © 2025 MKH-GAMES All Rights Reserved.
+        © 2025 HARI, All Rights Reserved.
       </span>
 
                     <div className="flex items-center space-x-4">
@@ -37,14 +37,18 @@ export default function RootLayout({children}) {
                                 className="w-6 h-6"
                             />
                         </a>
-
                         <a
-                            href="https://mkh-games.vercel.app/"
+                            href="https://harigamesdev.itch.io/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:text-blue-500 transition-colors duration-300 text-2xl"
+                            aria-label="itch.io"
+                            className="hover:text-blue-500 transition-colors duration-300"
                         >
-                            🔗
+                            <img
+                                src="https://cdn.simpleicons.org/itchdotio/FFFFFF"
+                                alt="GitHub"
+                                className="w-6 h-6"
+                            />
                         </a>
 
                     </div>

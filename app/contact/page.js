@@ -82,7 +82,7 @@ export default function Contact() {
 
             {/* Contact Section */}
             <main className="flex-1 flex justify-center items-center px-4 py-10">
-                <div className="flex flex-col md:flex-row rounded-2xl overflow-hidden shadow-lg w-full max-w-4xl">
+                <div className="flex flex-col md:flex-row  overflow-hidden shadow-lg w-full max-w-4xl">
                     {/* Info Panel */}
                     <div className="bg-black text-white p-6 md:p-10 md:w-1/2">
                         <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
@@ -100,7 +100,7 @@ export default function Contact() {
                     </div>
 
                     {/* Form Panel */}
-                    <div className="bg-black text-white p-6 md:p-10 md:w-1/2 border border-white rounded-lg">
+                    <div className="bg-black text-white p-6 md:p-10 md:w-1/2 border-2 border-white rounded-lg">
                         {!submitted ? (
                             <form onSubmit={handleSubmit} className="space-y-4">
                                 <div>
