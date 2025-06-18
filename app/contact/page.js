@@ -52,7 +52,7 @@ export default function Contact() {
         <div className="flex flex-col min-h-screen font-sans bg-black text-white">
             {/* Header */}
             <header className="bg-black text-white py-3">
-                <div className="px-4 lg:px-8 mx-auto w-full max-w-7xl pb-2">
+                <div className="px-4 lg:px-8 mx-auto w-full max-w-7xl">
                     <div className="border-b relative flex h-16 items-center justify-between w-full">
                         <Link href="/" className="flex items-center space-x-2 text-2xl font-bold">
                             HARI

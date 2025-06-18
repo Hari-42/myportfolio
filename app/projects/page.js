@@ -159,7 +159,7 @@ export default function Projects() {
         <div className="flex flex-col min-h-screen font-sans bg-black text-white">
             {/* Header */}
             <header className="bg-black text-white py-3">
-                <div className="px-4 lg:px-8 mx-auto w-full max-w-7xl pb-2">
+                <div className="px-4 lg:px-8 mx-auto w-full max-w-7xl">
                     <div className="border-b relative flex h-16 items-center justify-between w-full">
                         <div className="flex items-center">
                             <Link href="/" className="flex items-center space-x-2 text-2xl font-bold">HARI</Link>
@@ -193,9 +193,17 @@ export default function Projects() {
             </header>
 
             {/* Main Content */}
-            <main className="flex-1 flex flex-col items-center justify-start px-6 py-12">
+            <main className="relative flex-1 flex flex-col items-center justify-start px-6 py-12">
+                {/* Zinc Gradient Sides */}
+                <div className="pointer-events-none absolute inset-0 z-0">
+                    <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-zinc-500 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-zinc-500 to-transparent" />
+                    <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-zinc-500 to-transparent" />
+                    <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-zinc-500 to-transparent" />
+                </div>
+
                 <motion.h1
-                    className="text-4xl font-bold text-center mb-6"
+                    className="text-4xl font-bold text-center mb-6 z-10 relative"
                     variants={fadeUp}
                     initial="hidden"
                     animate="visible"
@@ -205,7 +213,7 @@ export default function Projects() {
                 </motion.h1>
 
                 {/* Dropdown Filter */}
-                <div className="flex justify-end w-full max-w-6xl mb-10">
+                <div className="flex justify-end w-full max-w-6xl mb-10 z-10 relative">
                     <select
                         value={activeFilter}
                         onChange={(e) => setActiveFilter(e.target.value)}
@@ -222,7 +230,7 @@ export default function Projects() {
                 {filteredProjects.map((project, idx) => (
                     <motion.div
                         key={idx}
-                        className={`flex flex-col ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center mb-16 max-w-6xl w-full gap-8`}
+                        className={`flex flex-col ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center mb-16 max-w-6xl w-full gap-8 z-10 relative`}
                         variants={fadeUp}
                         initial="hidden"
                         whileInView="visible"
@@ -249,7 +257,7 @@ export default function Projects() {
                 ))}
 
                 {filteredProjects.length === 0 && (
-                    <p className="text-center text-gray-400 text-lg mt-8">No projects match the selected filter.</p>
+                    <p className="text-center text-gray-400 text-lg mt-8 z-10 relative">No projects match the selected filter.</p>
                 )}
             </main>
         </div>
