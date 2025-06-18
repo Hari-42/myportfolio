@@ -112,7 +112,7 @@ export default function Aboutme() {
                 </section>
 
                 {/* Cards Section */}
-                <section className="py-16 px-6 bg-black">
+                <section className="py-20 px-6 bg-gradient-to-bl from-zinc-800 via-black to-zinc-900">
                     <div className="max-w-7xl mx-auto">
                         <h2 className="text-4xl font-bold text-center mb-12">Hobbies & Interests</h2>
 
