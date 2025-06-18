@@ -1,17 +1,60 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
-import Image from "next/image"; // Required for optimized images
+import Link from "next/link";
+import { motion } from "framer-motion";
 
+const fadeUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 },
+};
 export default function Aboutme() {
     const [isOpen, setIsOpen] = useState(false);
+
+    const sections = [
+        {
+            title: "Playing Piano",
+            img: "/piano.jpg",
+            text: "Playing piano lets me express emotions I can't always put into words. It fuels my creativity.",
+            type: "Hobby",
+        },
+        {
+            title: "Fitness",
+            img: "/fitness.jpg",
+            text: "Fitness grounds me. It keeps me strong, focused, and helps balance my life.",
+            type: "Hobby",
+        },
+        {
+            title: "Game Development",
+            img: "/superflexagon.png",
+            text: "Game dev is my creative playground. SUPER-FLEXAGON was my first creation!",
+            type: "Hobby",
+        },
+        {
+            title: "Psychology & The Mind",
+            img: "/psychology.jpg",
+            text: "I'm fascinated by human behavior and thought. Psychology opens up new insights.",
+            type: "Interest",
+        },
+        {
+            title: "Filmmaking",
+            img: "/filmmaking.jpg",
+            text: "Storytelling through film allows me to guide emotion and narrative with visuals.",
+            type: "Interest",
+        },
+        {
+            title: "Astrophysics",
+            img: "/astrophysics.jpg",
+            text: "Exploring the universe reminds me how small we are, yet how much there is to learn.",
+            type: "Interest",
+        },
+    ];
 
 
     return (
         <div className="flex flex-col min-h-screen font-sans bg-black text-white">
             <header className="bg-black text-white py-3">
-                <div className="px-4 lg:px-8 mx-auto w-full max-w-7xl pb-2">
+                <div className="px-4 lg:px-8 mx-auto w-full max-w-7xl">
                     <div className="border-b relative flex h-16 items-center justify-between w-full">
                         <div className="flex items-center">
                             <Link href="/" className="flex items-center space-x-2 text-2xl font-bold">
@@ -44,131 +87,59 @@ export default function Aboutme() {
                 </div>
             </header>
 
-            <main className="flex-1 flex flex-col  px-6 py-12 items-center">
-                <h1 className="text-4xl font-bold text-center mb-10">About Me</h1>
-
-                <p className="text-lg leading-relaxed mb-6 max-w-3xl mx-auto text-center text-white block text-justify">
-                    Hi, My name is Hari!
-                    I create games and applications, and I make them for free because I love sharing my passion with
-                    everyone.
-                    Programming is my way of unleashing my creativity, letting ideas flow, and turning them into
-                    something people can enjoy.
-                    Each project is a unique journey where I experiment, innovate, and just have fun.
-                    It’s about bringing joy to others while doing something I genuinely love.
-                    So, if you’re curious, dive into my applications and games.
-                    There’s always something exciting waiting for you!
-                </p>
-
-                {/* Hobbies */}
-                <h1 className="text-4xl font-bold text-center mb-10 pt-20">Hobbies</h1>
-
-                {/* Piano Playing */}
-                <div className="flex flex-col md:flex-row items-center mb-16 max-w-6xl w-full gap-8 text-white">
-                    <img
-                        src="/piano.jpg"
-                        alt="playing piano"
-                        className="w-full md:w-1/2 rounded-xl shadow-lg"
-                    />
-                    <div className="md:w-1/2">
-                        <h2 className="text-2xl font-bold mb-2 text-center md:text-left">Playing piano</h2>
-                        <p className="text-lg leading-relaxed text-justify">
-                            Playing piano lets me express emotions I can&#39;t always put into words. Whether it&#39;s classical melodies or spontaneous improvisations,
-                            every session is a new emotional journey. It helps me reset my mind, focus better, and fuels my creativity in other
-                            parts of life like programming. There&#39;s something incredibly satisfying about building harmony from silence.
-                        </p>
+            <main className="">
+                <section className="bg-gradient-to-br from-zinc-900 via-black to-zinc-800 py-20 px-6">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <motion.h1
+                            className="text-5xl font-bold mb-6"
+                            initial="hidden"
+                            animate="visible"
+                            variants={fadeUp}
+                            transition={{ duration: 0.6 }}
+                        >
+                            Hello, I’m Hari
+                        </motion.h1>
+                        <motion.p
+                            className="text-xl max-w-2xl mx-auto leading-relaxed text-gray-300"
+                            initial="hidden"
+                            animate="visible"
+                            variants={fadeUp}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                        >
+                            I create free games and apps out of pure passion. Programming is my creative way to express myself, where ideas come to life and fun begins. Every project is a new adventure to explore, experiment, and share joy with others. Check out my work, there’s always something exciting to discover!
+                        </motion.p>
                     </div>
-                </div>
+                </section>
 
-                {/* Fitness */}
-                <div className="flex flex-col md:flex-row-reverse items-center mb-16 max-w-6xl w-full gap-8 text-white">
-                    <img
-                        src="/fitness.jpg"
-                        alt="Fitness"
-                        className="w-full md:w-1/2 rounded-xl shadow-lg"
-                    />
-                    <div className="md:w-1/2">
-                        <h2 className="text-2xl font-bold mb-2 text-center md:text-left">Fitness</h2>
-                        <p className="text-lg leading-relaxed text-justify">
-                            Fitness is my anchor, it grounds me, strengthens me, and keeps me energized. While lifting weights, every rep is a reminder of growth and discipline.
-                            It&#39;s not just about physical strength, but also mental clarity and emotional resilience. The consistency of fitness
-                            carries over into my projects, making me more focused and persistent. It&#39;s my way of staying sharp and balanced.
-                        </p>
+                {/* Cards Section */}
+                <section className="py-16 px-6 bg-black">
+                    <div className="max-w-7xl mx-auto">
+                        <h2 className="text-4xl font-bold text-center mb-12">Hobbies & Interests</h2>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                            {sections.map((item, index) => (
+                                <motion.div
+                                    key={item.title}
+                                    className="bg-zinc-900 rounded-xl overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300"
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true }}
+                                    variants={fadeUp}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                >
+                                    <img src={item.img} alt={item.title} className="w-full h-48 object-cover" />
+                                    <div className="p-5">
+                                        <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                                        <p className="text-gray-300">{item.text}</p>
+                                        <span className="mt-4 inline-block text-sm text-gray-500 uppercase tracking-wide">
+                    {item.type}
+                  </span>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
-                </div>
-
-                {/* Game Development */}
-                <div className="flex flex-col md:flex-row items-center mb-16 max-w-6xl w-full gap-8 text-white">
-                    <img
-                        src="/superflexagon.png"
-                        alt="Game Development"
-                        className="w-full md:w-1/2 rounded-xl shadow-lg"
-                    />
-                    <div className="md:w-1/2">
-                        <h2 className="text-2xl font-bold mb-2 text-center md:text-left">Game Development</h2>
-                        <p className="text-lg leading-relaxed text-justify">
-                            Game development is a way to express my creativity, just like designing levels, storytelling and code into an immersive experience.
-                            It challenges every part of my brain, from logical thinking to artistic vision. I love creating worlds that players
-                            can explore, shaping mechanics that are fun and intuitive, and watching ideas evolve into interactive adventures.
-                            Every bug fixed and every level completed is a tiny victory. It’s more than a hobby, it&#39;s a passion that lets me
-                            build joy for others. This is a picture is from my game, it is called SUPER-FLEXAGON. It&#39;s my first game.
-                        </p>
-                    </div>
-                </div>
-
-
-                {/* Interests */}
-                <h1 className="text-4xl font-bold text-center mb-10 pt-20">Interests</h1>
-
-                {/* Psychology */}
-                <div className="flex flex-col md:flex-row items-center mb-16 max-w-6xl w-full gap-8 text-white">
-                    <img
-                        src="/psychology.jpg"
-                        alt="Psychology"
-                        className="w-full md:w-1/2 rounded-xl shadow-lg"
-                    />
-                    <div className="md:w-1/2">
-                        <h2 className="text-2xl font-bold mb-2 text-center md:text-left">Psychology & The Human Mind</h2>
-                        <p className="text-lg leading-relaxed text-justify">
-                            I’m fascinated by how the human mind works, how we think, feel, and make decisions. Exploring cognitive patterns, emotions, and behaviors opens
-                            up a deeper understanding of ourselves and others. The complexity of the brain and the subtle intricacies of human psychology are
-                            both humbling and inspiring. It&#39;s a field that constantly reminds me of how magnificent and mysterious the mind truly is.
-                        </p>
-                    </div>
-                </div>
-
-                {/* Filmmaking */}
-                <div className="flex flex-col md:flex-row-reverse items-center mb-16 max-w-6xl w-full gap-8 text-white">
-                    <img
-                        src="/filmmaking.jpg"
-                        alt="Filmmaking"
-                        className="w-full md:w-1/2 rounded-xl shadow-lg"
-                    />
-                    <div className="md:w-1/2">
-                        <h2 className="text-2xl font-bold mb-2 text-center md:text-left">Filmmaking & Storytelling</h2>
-                        <p className="text-lg leading-relaxed text-justify">
-                            Filmmaking excites me because it&#39;s a perfect blend of art and technology. Whether it&#39;s visual effects, editing, or storytelling, each part contributes
-                            to building immersive and emotional narratives. I love how every frame, sound, and transition can be used to guide the viewer’s experience.
-                            It&#39;s a powerful way to connect with others and bring stories to life.
-                        </p>
-                    </div>
-                </div>
-
-                {/* Astrophysics */}
-                <div className="flex flex-col md:flex-row items-center mb-16 max-w-6xl w-full gap-8 text-white">
-                    <img
-                        src="/astrophysics.jpg"
-                        alt="Astrophysics"
-                        className="w-full md:w-1/2 rounded-xl shadow-lg"
-                    />
-                    <div className="md:w-1/2">
-                        <h2 className="text-2xl font-bold mb-2 text-center md:text-left">Astrophysics & The Universe</h2>
-                        <p className="text-lg leading-relaxed text-justify">
-                            The universe is vast and full of mysteries, and astrophysics is my way of exploring those. I&#39;m endlessly curious about stars, black holes,
-                            galaxies, and the laws that govern everything. Thinking about space and our place in the cosmos sparks both awe and wonder in me.
-                            It’s a subject that constantly reminds me how little we know and how much more there is to learn.
-                        </p>
-                    </div>
-                </div>
+                </section>
             </main>
         </div>
     );

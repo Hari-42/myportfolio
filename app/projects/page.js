@@ -3,6 +3,12 @@
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 },
+};
 
 const projects = [
     {
@@ -188,7 +194,15 @@ export default function Projects() {
 
             {/* Main Content */}
             <main className="flex-1 flex flex-col items-center justify-start px-6 py-12">
-                <h1 className="text-4xl font-bold text-center mb-6">Projects</h1>
+                <motion.h1
+                    className="text-4xl font-bold text-center mb-6"
+                    variants={fadeUp}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{ duration: 0.6 }}
+                >
+                    Projects
+                </motion.h1>
 
                 {/* Dropdown Filter */}
                 <div className="flex justify-end w-full max-w-6xl mb-10">
@@ -206,7 +220,15 @@ export default function Projects() {
 
                 {/* Filtered Projects */}
                 {filteredProjects.map((project, idx) => (
-                    <div key={idx} className={`flex flex-col ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center mb-16 max-w-6xl w-full gap-8`}>
+                    <motion.div
+                        key={idx}
+                        className={`flex flex-col ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center mb-16 max-w-6xl w-full gap-8`}
+                        variants={fadeUp}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: idx * 0.1 }}
+                    >
                         <Image src={project.image} alt={project.title} width={600} height={400} className="w-full md:w-1/2 rounded-xl shadow-lg" />
                         <div className="md:w-1/2">
                             <h2 className="text-2xl font-bold mb-2 text-center md:text-left text-[#5E8FB8]">{project.title}</h2>
@@ -223,7 +245,7 @@ export default function Projects() {
                                 ))}
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
 
                 {filteredProjects.length === 0 && (

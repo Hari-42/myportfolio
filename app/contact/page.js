@@ -2,6 +2,12 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 },
+};
 
 export default function Contact() {
     const [isOpen, setIsOpen] = useState(false);
@@ -63,7 +69,7 @@ export default function Contact() {
                             <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none">
                                 <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                                          d="M4 6h16M4 12h16M4 18h16"/>
+                                          d="M4 6h16M4 12h16M4 18h16" />
                                 </svg>
                             </button>
                         </div>
@@ -82,12 +88,22 @@ export default function Contact() {
 
             {/* Contact Section */}
             <main className="flex-1 flex justify-center items-center px-4 py-10">
-                <div className="flex flex-col md:flex-row  overflow-hidden shadow-lg w-full max-w-4xl">
+                <motion.div
+                    className="flex flex-col md:flex-row overflow-hidden shadow-lg w-full max-w-4xl"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    variants={fadeUp}
+                >
                     {/* Info Panel */}
-                    <div className="bg-black text-white p-6 md:p-10 md:w-1/2">
+                    <motion.div
+                        className="bg-black text-white p-6 md:p-10 md:w-1/2"
+                        variants={fadeUp}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                    >
                         <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
-                        <p className="mb-6">Feel free to reach out for collaborations, questions, or just to say hi
-                            👋</p>
+                        <p className="mb-6">Feel free to reach out for collaborations, questions, or just to say hi 👋</p>
                         <p className="text-red-500 mb-6">Note: use your real mail, so I can write you back</p>
                         <ul className="space-y-4 text-sm">
                             <li className="flex items-center gap-2">
@@ -97,10 +113,14 @@ export default function Contact() {
                                 📍 Switzerland
                             </li>
                         </ul>
-                    </div>
+                    </motion.div>
 
                     {/* Form Panel */}
-                    <div className="bg-black text-white p-6 md:p-10 md:w-1/2 border-2 border-white rounded-lg">
+                    <motion.div
+                        className="bg-black text-white p-6 md:p-10 md:w-1/2 border-2 border-white rounded-lg"
+                        variants={fadeUp}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                    >
                         {!submitted ? (
                             <form onSubmit={handleSubmit} className="space-y-4">
                                 <div>
@@ -142,8 +162,8 @@ export default function Contact() {
                         ) : (
                             <p className="text-white">Thanks! Looking forward to connecting with you soon!</p>
                         )}
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </main>
         </div>
     );
