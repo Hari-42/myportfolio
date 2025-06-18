@@ -196,10 +196,8 @@ export default function Projects() {
             <main className="relative flex-1 flex flex-col items-center justify-start px-6 py-12">
                 {/* Zinc Gradient Sides */}
                 <div className="pointer-events-none absolute inset-0 z-0">
-                    <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-zinc-500 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-zinc-500 to-transparent" />
-                    <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-zinc-500 to-transparent" />
-                    <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-zinc-500 to-transparent" />
+                    <div className="absolute top-0 left-0 right-0 h-14 bg-gradient-to-b from-zinc-900 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-zinc-900 to-transparent" />
                 </div>
 
                 <motion.h1

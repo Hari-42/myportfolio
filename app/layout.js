@@ -12,7 +12,7 @@ export default function RootLayout({children}) {
         <body className="bg-white text-white">
         {children}
         {/* Footer */}
-        <footer className="bg-black text-white pt-8 w-full">
+        <footer className="bg-black text-white w-full">
             <div className="px-4 lg:px-8 mx-auto w-full max-w-7xl p-4">
                 <hr className="my-6" />
 
