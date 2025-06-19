@@ -87,7 +87,7 @@ export default function Contact() {
             </header>
 
             {/* Contact Section */}
-            <main className="flex-1 flex justify-center items-center px-4 py-10">
+            <main className="flex-1 flex justify-center items-center px-4 py-10 bg-gradient-to-bl from-zinc-800 via-black to-zinc-800">
                 <motion.div
                     className="flex flex-col md:flex-row overflow-hidden shadow-lg w-full max-w-4xl"
                     initial="hidden"

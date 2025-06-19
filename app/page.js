@@ -56,8 +56,8 @@ export default function Home() {
             </header>
 
             {/* Main Content */}
-            <main className="flex-1 flex items-center justify-center text-white px-8">
-                <motion.div
+            <main className="flex-1 flex items-center justify-center text-white px-8 bg-gradient-to-br from-zinc-800 via-black to-zinc-800">
+            <motion.div
                     className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full"
                     initial="hidden"
                     whileInView="visible"
