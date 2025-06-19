@@ -6,8 +6,16 @@ import { motion } from "framer-motion";
 
 const fadeUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.9,
+            ease: [0.25, 0.8, 0.25, 1] // smoother cubic-bezier easing
+        }
+    },
 };
+
 export default function Aboutme() {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -114,7 +122,16 @@ export default function Aboutme() {
                 {/* Cards Section */}
                 <section className="py-20 px-6 bg-gradient-to-bl from-zinc-800 via-black to-zinc-900">
                     <div className="max-w-7xl mx-auto">
-                        <h2 className="text-4xl font-bold text-center mb-12">Hobbies & Interests</h2>
+                        <motion.h2
+                            className="text-4xl font-bold text-center mb-12"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            variants={fadeUp}
+                            transition={{ duration: 0.6 }}
+                        >
+                            Hobbies & Interests
+                        </motion.h2>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                             {sections.map((item, index) => (

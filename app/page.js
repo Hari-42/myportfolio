@@ -6,7 +6,14 @@ import { motion } from "framer-motion";
 
 const fadeUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.9,
+            ease: [0.25, 0.8, 0.25, 1] // smoother cubic-bezier easing
+        }
+    },
 };
 
 export default function Home() {
