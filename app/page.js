@@ -20,9 +20,9 @@ export default function Home() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="flex flex-col min-h-screen font-sans bg-black">
+        <div className="flex flex-col min-h-screen font-sans bg-black bg-gradient-to-br from-zinc-800 via-black to-zinc-800">
             {/* Header */}
-            <header className="bg-black text-white py-3">
+            <header className=" text-white py-3">
                 <div className="px-4 lg:px-8 mx-auto w-full max-w-7xl">
                     <div className="border-b relative flex h-16 items-center justify-between w-full">
                         <div className="flex items-center">
@@ -63,7 +63,7 @@ export default function Home() {
             </header>
 
             {/* Main Content */}
-            <main className="flex-1 flex items-center justify-center text-white px-8 bg-gradient-to-br from-zinc-800 via-black to-zinc-800">
+            <main className="flex-1 flex items-center justify-center text-white px-8">
             <motion.div
                     className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full"
                     initial="hidden"
@@ -94,6 +94,49 @@ export default function Home() {
                     </motion.div>
                 </motion.div>
             </main>
+            <footer className=" text-white w-full">
+                <div className="px-4 lg:px-8 mx-auto w-full max-w-7xl p-4">
+                    <hr className="my-6" />
+
+                    <div className="flex items-center justify-between">
+                        <div className="text-2xl font-bold">HARI</div>
+
+                        <span className="text-sm">
+                            © 2025 HARI, All Rights Reserved.
+                        </span>
+
+                        <div className="flex items-center space-x-4">
+                            <a
+                                href="https://github.com/Hari-42"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="GitHub Hari-42"
+                                className="hover:text-blue-500 transition-colors duration-300"
+                            >
+                                <img
+                                    src="https://cdn.simpleicons.org/github/FFFFFF"
+                                    alt="GitHub"
+                                    className="w-6 h-6"
+                                />
+                            </a>
+                            <a
+                                href="https://harigamesdev.itch.io/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="itch.io"
+                                className="hover:text-blue-500 transition-colors duration-300"
+                            >
+                                <img
+                                    src="https://cdn.simpleicons.org/itchdotio/FFFFFF"
+                                    alt="GitHub"
+                                    className="w-6 h-6"
+                                />
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 }

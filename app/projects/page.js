@@ -12,11 +12,10 @@ const fadeUp = {
         y: 0,
         transition: {
             duration: 0.9,
-            ease: [0.25, 0.8, 0.25, 1] // smoother cubic-bezier easing
-        }
+            ease: [0.25, 0.8, 0.25, 1],
+        },
     },
 };
-
 
 const projects = [
     {
@@ -157,27 +156,41 @@ export default function Projects() {
     const [isOpen, setIsOpen] = useState(false);
     const [activeFilter, setActiveFilter] = useState("All");
 
-    const allTags = Array.from(new Set(projects.flatMap(p => p.tags))).sort();
+    const allTags = Array.from(new Set(projects.flatMap((p) => p.tags))).sort();
 
-    const filteredProjects = activeFilter === "All"
-        ? projects
-        : projects.filter(project => project.tags.includes(activeFilter));
+    const filteredProjects =
+        activeFilter === "All"
+            ? projects
+            : projects.filter((project) => project.tags.includes(activeFilter));
 
     return (
-        <div className="flex flex-col min-h-screen font-sans bg-black text-white">
+        <div className="flex flex-col min-h-screen font-sans bg-black text-white relative">
+            {/* Zinc Gradient Top */}
+            <div className="pointer-events-none fixed top-0 left-0 right-0 h-64 bg-gradient-to-b from-zinc-800 to-transparent z-0" />
+
             {/* Header */}
-            <header className="bg-black text-white py-3">
+            <header className=" text-white py-3 relative z-10">
                 <div className="px-4 lg:px-8 mx-auto w-full max-w-7xl">
                     <div className="border-b relative flex h-16 items-center justify-between w-full">
                         <div className="flex items-center">
-                            <Link href="/" className="flex items-center space-x-2 text-2xl font-bold">HARI</Link>
+                            <Link href="/" className="flex items-center space-x-2 text-2xl font-bold">
+                                HARI
+                            </Link>
                         </div>
 
                         <nav className="hidden md:flex space-x-4">
-                            <Link href="/" className="inline-flex items-center text-lg font-medium h-10 px-4 py-2">Home</Link>
-                            <Link href="/projects" className="inline-flex items-center text-lg font-bold h-10 px-4 py-2">Projects</Link>
-                            <Link href="/aboutme" className="inline-flex items-center text-lg font-medium h-10 px-4 py-2">About Me</Link>
-                            <Link href="/contact" className="inline-flex items-center text-lg font-medium h-10 px-4 py-2">Contact</Link>
+                            <Link href="/" className="inline-flex items-center text-lg font-medium h-10 px-4 py-2">
+                                Home
+                            </Link>
+                            <Link href="/projects" className="inline-flex items-center text-lg font-bold h-10 px-4 py-2">
+                                Projects
+                            </Link>
+                            <Link href="/aboutme" className="inline-flex items-center text-lg font-medium h-10 px-4 py-2">
+                                About Me
+                            </Link>
+                            <Link href="/contact" className="inline-flex items-center text-lg font-medium h-10 px-4 py-2">
+                                Contact
+                            </Link>
                         </nav>
 
                         <div className="md:hidden flex items-center">
@@ -191,25 +204,27 @@ export default function Projects() {
 
                     {isOpen && (
                         <div className="md:hidden mt-2 space-y-2">
-                            <Link href="/" className="block text-sm font-medium py-2">Home</Link>
-                            <Link href="/projects" className="block text-sm font-bold py-2">Projects</Link>
-                            <Link href="/aboutme" className="block text-sm font-medium py-2">About Me</Link>
-                            <Link href="/contact" className="block text-sm font-medium py-2">Contact</Link>
+                            <Link href="/" className="block text-sm font-medium py-2">
+                                Home
+                            </Link>
+                            <Link href="/projects" className="block text-sm font-bold py-2">
+                                Projects
+                            </Link>
+                            <Link href="/aboutme" className="block text-sm font-medium py-2">
+                                About Me
+                            </Link>
+                            <Link href="/contact" className="block text-sm font-medium py-2">
+                                Contact
+                            </Link>
                         </div>
                     )}
                 </div>
             </header>
 
             {/* Main Content */}
-            <main className="relative flex-1 flex flex-col items-center justify-start px-6 py-12">
-                {/* Zinc Gradient Sides */}
-                <div className="pointer-events-none absolute inset-0 z-0">
-                    <div className="absolute top-0 left-0 right-0 h-128 bg-gradient-to-b from-zinc-800 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 h-128 bg-gradient-to-t from-zinc-800 to-transparent" />
-                </div>
-
+            <main className="relative flex-1 flex flex-col items-center justify-start px-6 py-12 z-10">
                 <motion.h1
-                    className="text-4xl font-bold text-center mb-6 z-10 relative"
+                    className="text-4xl font-bold text-center mb-6"
                     variants={fadeUp}
                     initial="hidden"
                     animate="visible"
@@ -219,15 +234,17 @@ export default function Projects() {
                 </motion.h1>
 
                 {/* Dropdown Filter */}
-                <div className="flex justify-end w-full max-w-6xl mb-10 z-10 relative">
+                <div className="flex justify-end w-full max-w-6xl mb-10">
                     <select
                         value={activeFilter}
                         onChange={(e) => setActiveFilter(e.target.value)}
-                        className="bg-black text-white border border-white px-4 py-2 rounded-md"
+                        className="text-white border border-white px-4 py-2 rounded-md bg-transparent focus:bg-black focus:outline-none"
                     >
                         <option value="All">All</option>
-                        {allTags.map(tag => (
-                            <option key={tag} value={tag}>{tag}</option>
+                        {allTags.map((tag) => (
+                            <option key={tag} value={tag}>
+                                {tag}
+                            </option>
                         ))}
                     </select>
                 </div>
@@ -236,26 +253,45 @@ export default function Projects() {
                 {filteredProjects.map((project, idx) => (
                     <motion.div
                         key={idx}
-                        className={`flex flex-col ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center mb-16 max-w-6xl w-full gap-8 z-10 relative`}
+                        className={`flex flex-col ${
+                            idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                        } items-center mb-16 max-w-6xl w-full gap-8`}
                         variants={fadeUp}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: idx * 0.1 }}
                     >
-                        <Image src={project.image} alt={project.title} width={600} height={400} className="w-full md:w-1/2 rounded-xl shadow-lg" />
+                        <Image
+                            src={project.image}
+                            alt={project.title}
+                            width={600}
+                            height={400}
+                            className="w-full md:w-1/2 rounded-xl shadow-lg"
+                        />
                         <div className="md:w-1/2">
-                            <h2 className="text-2xl font-bold mb-2 text-center md:text-left text-[#5E8FB8]">{project.title}</h2>
+                            <h2 className="text-2xl font-bold mb-2 text-center md:text-left text-[#5E8FB8]">
+                                {project.title}
+                            </h2>
                             <p className="text-lg leading-relaxed text-justify mb-4">{project.description}</p>
                             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                                 {project.links.map((link, linkIdx) => (
-                                    <a key={linkIdx} href={link.href} target="_blank" rel="noopener noreferrer"
-                                       className="bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-300 transition">{link.label}</a>
+                                    <a
+                                        key={linkIdx}
+                                        href={link.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-300 transition"
+                                    >
+                                        {link.label}
+                                    </a>
                                 ))}
                             </div>
                             <div className="flex flex-wrap gap-2 mt-4 justify-center md:justify-start">
                                 {project.tags.map((tag, tagIdx) => (
-                                    <span key={tagIdx} className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">{tag}</span>
+                                    <span key={tagIdx} className="bg-gray-800 text-white text-sm px-3 py-1 rounded-full">
+                    {tag}
+                  </span>
                                 ))}
                             </div>
                         </div>
@@ -263,9 +299,56 @@ export default function Projects() {
                 ))}
 
                 {filteredProjects.length === 0 && (
-                    <p className="text-center text-gray-400 text-lg mt-8 z-10 relative">No projects match the selected filter.</p>
+                    <p className="text-center text-gray-400 text-lg mt-8">
+                        No projects match the selected filter.
+                    </p>
                 )}
             </main>
+
+            {/* Footer */}
+            <footer className="text-white w-full relative z-10">
+                <div className="px-4 lg:px-8 mx-auto w-full max-w-7xl p-4">
+                    <hr className="my-6" />
+
+                    <div className="flex items-center justify-between">
+                        <div className="text-2xl font-bold">HARI</div>
+
+                        <span className="text-sm">© 2025 HARI, All Rights Reserved.</span>
+
+                        <div className="flex items-center space-x-4">
+                            <a
+                                href="https://github.com/Hari-42"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="GitHub Hari-42"
+                                className="hover:text-blue-500 transition-colors duration-300"
+                            >
+                                <img
+                                    src="https://cdn.simpleicons.org/github/FFFFFF"
+                                    alt="GitHub"
+                                    className="w-6 h-6"
+                                />
+                            </a>
+                            <a
+                                href="https://harigamesdev.itch.io/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="itch.io"
+                                className="hover:text-blue-500 transition-colors duration-300"
+                            >
+                                <img
+                                    src="https://cdn.simpleicons.org/itchdotio/FFFFFF"
+                                    alt="itch.io"
+                                    className="w-6 h-6"
+                                />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            {/* Bottom Gradient Overlay */}
+            <div className="pointer-events-none fixed bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-zinc-800 to-transparent z-0" />
         </div>
     );
 }

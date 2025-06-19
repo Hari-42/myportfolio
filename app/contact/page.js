@@ -56,9 +56,9 @@ export default function Contact() {
     };
 
     return (
-        <div className="flex flex-col min-h-screen font-sans bg-black text-white">
+        <div className="flex flex-col min-h-screen font-sans  text-white bg-gradient-to-bl from-zinc-800 via-black to-zinc-800">
             {/* Header */}
-            <header className="bg-black text-white py-3">
+            <header className=" text-white py-3">
                 <div className="px-4 lg:px-8 mx-auto w-full max-w-7xl">
                     <div className="border-b relative flex h-16 items-center justify-between w-full">
                         <Link href="/" className="flex items-center space-x-2 text-2xl font-bold">
@@ -94,7 +94,7 @@ export default function Contact() {
             </header>
 
             {/* Contact Section */}
-            <main className="flex-1 flex justify-center items-center px-4 py-10 bg-gradient-to-bl from-zinc-800 via-black to-zinc-800">
+            <main className="flex-1 flex justify-center items-center px-4 py-10">
                 <motion.div
                     className="flex flex-col md:flex-row overflow-hidden shadow-lg w-full max-w-4xl"
                     initial="hidden"
@@ -105,7 +105,7 @@ export default function Contact() {
                 >
                     {/* Info Panel */}
                     <motion.div
-                        className="bg-black text-white p-6 md:p-10 md:w-1/2"
+                        className=" text-white p-6 md:p-10 md:w-1/2"
                         variants={fadeUp}
                         transition={{ duration: 0.6, delay: 0.1 }}
                     >
@@ -172,6 +172,49 @@ export default function Contact() {
                     </motion.div>
                 </motion.div>
             </main>
+            <footer className=" text-white w-full">
+                <div className="px-4 lg:px-8 mx-auto w-full max-w-7xl p-4">
+                    <hr className="my-6" />
+
+                    <div className="flex items-center justify-between">
+                        <div className="text-2xl font-bold">HARI</div>
+
+                        <span className="text-sm">
+                            © 2025 HARI, All Rights Reserved.
+                        </span>
+
+                        <div className="flex items-center space-x-4">
+                            <a
+                                href="https://github.com/Hari-42"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="GitHub Hari-42"
+                                className="hover:text-blue-500 transition-colors duration-300"
+                            >
+                                <img
+                                    src="https://cdn.simpleicons.org/github/FFFFFF"
+                                    alt="GitHub"
+                                    className="w-6 h-6"
+                                />
+                            </a>
+                            <a
+                                href="https://harigamesdev.itch.io/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="itch.io"
+                                className="hover:text-blue-500 transition-colors duration-300"
+                            >
+                                <img
+                                    src="https://cdn.simpleicons.org/itchdotio/FFFFFF"
+                                    alt="GitHub"
+                                    className="w-6 h-6"
+                                />
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 }
