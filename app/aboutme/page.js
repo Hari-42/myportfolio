@@ -78,8 +78,8 @@ export default function Aboutme() {
             const maxRotate = 10;
 
             // Inverted tilt: card tilts toward mouse
-            setRotateX(offsetY * maxRotate);
-            setRotateY(-offsetX * maxRotate);
+            setRotateX(-offsetY * maxRotate);
+            setRotateY(offsetX * maxRotate);
         };
 
         const handleMouseLeave = () => {
@@ -117,7 +117,7 @@ export default function Aboutme() {
     }
 
     return (
-        <div className="flex flex-col min-h-screen font-sans text-white bg-gradient-to-br from-zinc-900 via-black to-zinc-800">
+        <div className="flex flex-col min-h-screen font-sans text-white bg-gradient-to-l from-zinc-800 via-black to-zinc-800">
             <header className="text-white py-3">
                 <div className="px-4 lg:px-8 mx-auto w-full max-w-7xl">
                     <div className="border-b relative flex h-16 items-center justify-between w-full">

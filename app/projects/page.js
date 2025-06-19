@@ -348,7 +348,7 @@ export default function Projects() {
             </footer>
 
             {/* Bottom Gradient Overlay */}
-            <div className="pointer-events-none fixed bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-zinc-800 to-transparent z-0" />
+            <div className="pointer-events-none fixed bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-zinc-900 to-transparent z-0" />
         </div>
     );
 }
