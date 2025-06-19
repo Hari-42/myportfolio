@@ -61,7 +61,7 @@ const projects = [
     },
     {
         title: "Web-Music-Player",
-        description: "It is a Music PLayer on web made with react. It was made as a group project with two friends of mine.",
+        description: "It is a Music Player on web made with react. It was made as a group project with two friends of mine.",
         image: "/wmp.png",
         links: [
             { label: "Website", href: "https://music-player-inky.vercel.app/" },
@@ -196,8 +196,8 @@ export default function Projects() {
             <main className="relative flex-1 flex flex-col items-center justify-start px-6 py-12">
                 {/* Zinc Gradient Sides */}
                 <div className="pointer-events-none absolute inset-0 z-0">
-                    <div className="absolute top-0 left-0 right-0 h-14 bg-gradient-to-b from-zinc-900 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-zinc-900 to-transparent" />
+                    <div className="absolute top-0 left-0 right-0 h-128 bg-gradient-to-b from-zinc-800 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 h-128 bg-gradient-to-t from-zinc-800 to-transparent" />
                 </div>
 
                 <motion.h1
