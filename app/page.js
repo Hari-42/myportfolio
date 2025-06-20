@@ -20,7 +20,7 @@ export default function Home() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="flex flex-col min-h-screen font-sans bg-black bg-gradient-to-br from-zinc-800 via-black to-zinc-800">
+        <div className="flex flex-col min-h-screen font-sans bg-black bg-gradient-to-br from-zinc-700 via-black to-zinc-700">
             {/* Header */}
             <header className=" text-white py-3">
                 <div className="px-4 lg:px-8 mx-auto w-full max-w-7xl">
