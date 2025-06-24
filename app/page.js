@@ -11,7 +11,7 @@ const fadeUp = {
         y: 0,
         transition: {
             duration: 0.9,
-            ease: [0.25, 0.8, 0.25, 1] // smoother cubic-bezier easing
+            ease: [0.25, 0.8, 0.25, 1]
         }
     },
 };
@@ -22,7 +22,7 @@ export default function Home() {
     return (
         <div className="flex flex-col min-h-screen font-sans bg-black bg-gradient-to-br from-zinc-700 via-black to-zinc-700">
             {/* Header */}
-            <header className=" text-white py-3">
+            <header className="text-white py-3">
                 <div className="px-4 lg:px-8 mx-auto w-full max-w-7xl">
                     <div className="border-b relative flex h-16 items-center justify-between w-full">
                         <div className="flex items-center">
@@ -64,7 +64,7 @@ export default function Home() {
 
             {/* Main Content */}
             <main className="flex-1 flex items-center justify-center text-white px-8">
-            <motion.div
+                <motion.div
                     className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full"
                     initial="hidden"
                     whileInView="visible"
@@ -82,19 +82,23 @@ export default function Home() {
                         <p className="text-xl md:text-2xl">I&#39;m a game/software developer.</p>
                     </motion.div>
 
-                    {/* Right side - Picture placeholder */}
+                    {/* Right side - Profile Picture */}
                     <motion.div
                         className="flex items-center justify-center"
                         variants={fadeUp}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        <div className="w-64 h-64 bg-gray-300 rounded-2xl flex items-center justify-center text-gray-700 text-xl">
-                            Picture Placeholder
-                        </div>
+                        <img
+                            src="/profile.png"
+                            alt="Profile"
+                            className="w-75 h-115 object-cover rounded-full border-4 border-white shadow-lg"
+                        />
                     </motion.div>
                 </motion.div>
             </main>
-            <footer className=" text-white w-full">
+
+            {/* Footer */}
+            <footer className="text-white w-full">
                 <div className="px-4 lg:px-8 mx-auto w-full max-w-7xl p-4">
                     <hr className="my-6" />
 
@@ -128,11 +132,10 @@ export default function Home() {
                             >
                                 <img
                                     src="https://cdn.simpleicons.org/itchdotio/FFFFFF"
-                                    alt="GitHub"
+                                    alt="itch.io"
                                     className="w-6 h-6"
                                 />
                             </a>
-
                         </div>
                     </div>
                 </div>
